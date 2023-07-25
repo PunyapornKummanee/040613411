@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+</head>
+<body>
+    
+    <fieldset style="width: 500px; height: 900px;">
+    <h3>แบบฟแร์มจองทัวร์</h3>
+
+    <fieldset>
+    <legend><b>ข้อมูลทั่วไป</b></legend>
+
+    <form action="form-echo.php" method="get">
+    ชื่อ-สกุล :
+    <br>
+    <input
+    type="text"
+    name="username"
+    placeholder="กรอกชื่อ-สกุล"     
+    pattern ="^[A-Za-z\u0E01-\u0E4D\s]+$"
+    title ="Username should only contain lowercase letter. e.g. john"  required > *
+    </form>
+
+            <!--กรอกไม่เข้า-->
+    <form action="form-echo.php" method="get">      
+        Email :
+        <br>
+    <input
+    type="email"
+    name="email"
+    placeholder=" "     
+    pattern =".+@gmail\.com"
+    title ="Username should only contain lowercase letter. e.g. john" required> *
+    </form>
+
+    <form action="form-echo.php" method="get">
+        โทรศัพท์</b> :
+        <br>
+    <input
+    type="tel"
+    name="phoneNumber" 
+    value="+66"
+    placeholder=" "
+    pattern ="\+66\d{9}"     
+    title ="Username should only contain lowercase letter. e.g. john" required> *
+    </form>
+
+    
+
+    <form action="form-echo.php" method="get">
+        ที่อยู่ :
+        <br>   
+    <textarea id="w3review" 
+    name="w3review" 
+    rows="3" 
+    cols="30">
+    </textarea>
+    </form>
+
+    <form action="form-echo.php" method="get">
+        รหัสไปรษณีย์ :
+    <input style="width: 50px;"
+    type="text"
+    name="username"
+    placeholder=" "     
+    pattern ="[0-9]{5}"
+    title ="Username should only contain lowercase letter. e.g. john">
+    </form>
+
+    <br>
+    
+    <form action="form-echo.php" method="get">
+        <label for="myfile">รูปผู้จอง :</label>
+        <input type="file" id="myfile" name="myfile">
+    </form>
+
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend><b>ข้อมูลเข้าสู่ระบบ</b></legend>
+    <form action="form-echo.php" method="get">
+        Username :
+        <br>
+        <input
+        type="text"
+        name="username"
+        placeholder=" "     
+        pattern ="[a-zA-Z0-9_]{8,}"
+        title ="Username should only contain lowercase letter. e.g. john">
+        </form>
+        <p><i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่8 ตัวขึ้นไป</i></p>
+
+    <form action="form-echo.php" method="get">
+        Password :
+        <br>
+        <input
+        type="password"
+        name="password"
+        placeholder=" "     
+        pattern =".{8,}"
+        title ="Username should only contain lowercase letter. e.g. john">
+        </form>
+        <p><i>ประกอบด้วยอักขระใดก็ได้8 ตัวขึ้นไป</i></p>
+  
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><b>ข้อมูลทัวร์ที่ต้องการ</b></legend>
+    <p><label>แพคเก็จทัวร์:</label>
+        <select name="country">
+        <option value="">--Please choose an option--</option>
+        <option value="South Korea">South Korea</option>
+        <option value="Japan">Japan</option>
+        <option value="Vietnam">Vietnam</option>
+        <option value="Netherlands">Netherlands</option>
+        <option value="Spain">Spain</option>
+        </select>
+
+    <form action="form-echo.php" method="get">
+        วันที่เดินทาง :
+        <input
+        type="date"
+        name="date">
+        </form>
+    
+    <br>
+    <form action="form-echo.php" method="get">
+    จำนวนผู้เดินทาง :
+    <input
+    type="number"
+    name="number"
+    min="1" 
+    max="10"
+    placeholder=" "     
+    title ="Username should only contain lowercase letter. e.g. john">
+    </form>
+
+    <br>
+    <form action="form-echo.php" method="get">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="shop">
+        <label for="vehicle1">ชอปปิ้ง</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="nature">
+        <label for="vehicle2">ธรรมชาติ</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="sea">
+        <label for="vehicle3">ทะเล</label>
+      </form>
+    
+    
+    <form action="form-echo.php">         
+            <label>ยอมรับเงื่อนไขและข้อตกลง :</label>
+            <input type="radio" id="age1" name="age" value="agree">
+            <label for="age1">i agree</label>
+            <input type="radio" id="age2" name="age" value="disagree">
+            <label for="age2">i disagree</label>
+            <input type="submit" value="จอง">
+    </form>
+
+    </fieldset>
+
+    </fieldset>
+     
+    
+</body>
+</html>

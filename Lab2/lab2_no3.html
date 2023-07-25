@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+</head>
+
+<body>
+   
+
+    <script>
+        
+        function Onchange() {
+          console.log(event.target.name);
+          console.log(event.target.value);
+
+        }
+    </script>
+
+    <script>
+        function Page2() { 
+            
+        event.preventDefault();
+   
+        window.location.href = "lab2_no3page2.html";
+        }
+  
+    </script>
+
+
+    <h1>เข้าสู่ระบบ</h1>
+    <form action="form-echo.php" method="get" onsubmit="Page2()" >
+        <fieldset style="width: 300px; height: 100px;">
+                     
+                <label>Username :</label>                           
+                <input
+                type="text"
+                name="username"
+                placeholder=" "     
+                pattern ="[a-zA-Z0-9_]{8,}"
+                title ="Username should only contain lowercase letter. e.g. john" autofocus required 
+                
+                onchange="Onchange()"
+                >
+                
+                      
+                <br>
+                <label>Password :</label>            
+                <input
+                type="password"
+                name="password"
+                placeholder=" "     
+                pattern =".{8,}"
+                title ="Username should only contain lowercase letter. e.g. john"  required
+                onchange="Onchange()"
+                >
+                <br>
+
+          
+                <label>กรุณาพิมพ์ตามตัวเลขที่กำหนด :</label> <br>
+                <label>1599</label><br>           
+                <input
+                type="text"
+                name="pass1599"
+                placeholder=" "     
+                pattern ="1599"
+                title ="Username should only contain lowercase letter. e.g. john" required>
+    
+        </fieldset>
+        
+        <br>
+        <a href="lab2_no3page2.html">
+            <input type="image" src="loginbotton.png" width="100" height="100" alt="Login"></input>
+        </a>
+        <!-- <button>login</button> -->
+
+    </form>
+</body>
+</html>
