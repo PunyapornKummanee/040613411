@@ -1,0 +1,29 @@
+<html>
+<head>
+    <style>
+        .green-text {
+            color: #008000; /* สีเขียว */
+        }
+    </style>
+    <script>
+        function checkField(elementId) {
+            var field = document.getElementById(elementId);
+            
+            if (field.value !== '') {
+                field.classList.add('green-text');
+            } else {
+                field.classList.remove('green-text');
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+<h1>Register</h1>
+Name: <input type="text" id="text1" onblur="checkField('text1')"><br>
+Age: <input type="text" id="num1" onblur="checkField('num1')"><br>
+Birthdate: <input type="text" id="num2" onblur="checkField('num2')"><br>
+<input type="submit" onclick="checkField()">
+<div id="errormsg"></div>
+</body>
+</html>

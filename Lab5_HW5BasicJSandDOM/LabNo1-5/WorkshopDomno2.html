@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function cal(){
+            let Option = document.getElementById("operation").value;
+
+            if(Option == "+"){
+                let Inputbox1 = document.getElementById("num1");
+                let Putbox1 = Inputbox1.value;
+                let Inputbox2 = document.getElementById("num2");
+                let Putbox2 = Inputbox2.value;
+
+                var resultB = Number(Putbox1) + Number(Putbox2);
+                resultB.innerHTML = resultB;
+
+                let retenner = document.getElementById("numresult");
+                retenner.value = resultB;
+            }
+            else if(Option == "-"){
+                let Inputbox1 = document.getElementById("num1");
+                let Putbox1 = Inputbox1.value;
+                let Inputbox2 = document.getElementById("num2");
+                let Putbox2 = Inputbox2.value;
+
+                var resultB = Number(Putbox1) - Number(Putbox2);
+                resultB.innerHTML = resultB;
+
+                let retenner = document.getElementById("numresult");
+                retenner.value = resultB;
+            }
+            else if(Option == "*"){
+                let Inputbox1 = document.getElementById("num1");
+                let Putbox1 = Inputbox1.value;
+                let Inputbox2 = document.getElementById("num2");
+                let Putbox2 = Inputbox2.value;
+
+                var resultB = Number(Putbox1) * Number(Putbox2);
+                resultB.innerHTML = resultB;
+
+                let retenner = document.getElementById("numresult");
+                retenner.value = resultB;
+            }
+            else if(Option == "/"){
+                let Inputbox1 = document.getElementById("num1");
+                let Putbox1 = Inputbox1.value;
+                let Inputbox2 = document.getElementById("num2");
+                let Putbox2 = Inputbox2.value;
+
+                var resultB = Number(Putbox1) / Number(Putbox2);
+                resultB.innerHTML = resultB;
+
+                let retenner = document.getElementById("numresult");
+                retenner.value = resultB;
+            }
+
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="number" id="num1" >
+    <select name="operation" id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" >
+    =
+    <input type="text" id="numresult">
+    <input type="submit" value="Go Go" onclick="cal()">
+</body>
+</html>
