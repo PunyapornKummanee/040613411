@@ -4,7 +4,7 @@
     <?php
 
     if ($_COOKIE["lang"]=="en") {
-        echo "welcom";
+        echo "welcome";
     }
     elseif ($_COOKIE["lang"]=="th") {
         
